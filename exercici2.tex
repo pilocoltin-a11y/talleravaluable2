@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[catalan]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\begin{document}
+\title{LABORATORI DE SOFTWARE I PROBLEMES \\ Taller Avaluable 2}
+\author{Caterina Serra i Víctor Girón}
+\date{23 de març de 2026}
+\maketitle
+\textbf{Complexos}
+
+Demostrau que si $z_1$ i $z_2$ són arrels del polinomi amb coeficients reals $x^2 - ax + b$, aleshores $z_1^n + z_2^n \in \mathbb{R}$, per a tot $n \in \mathbb{Z}^+$. En el cas concret $x^2 - 2x + 2 = 0$, determinau el valor de l'expressió en funció de $n$.
+
+\textbf{Solució:}
+
+Com que els coeficients del polinomi $x^2 - ax + b$ són reals, les arrels $z_1$ i $z_2$ són o bé reals o bé conjugades complexes. En el cas no real, $z_2 = \overline{z_1}$. 
+
+Escrivim $z_1$ en forma polar: $z_1 = r(\cos\theta + i\sin\theta)$, aleshores $z_2 = r(\cos\theta - i\sin\theta)$. 
+
+Per tant, per De Moivre:
+\[
+z_1^n = r^n(\cos n\theta + i\sin n\theta), \quad
+z_2^n = r^n(\cos n\theta - i\sin n\theta)
+\]
+
+Sumant:
+\[
+z_1^n + z_2^n = r^n\big[(\cos n\theta + i\sin n\theta) + (\cos n\theta - i\sin n\theta)\big] = 2r^n \cos(n\theta) \in \mathbb{R}.
+\]
+ 
+ Cas Particular:
+~$z_1 = 1 + i$, \quad $z_2 = 1 - i$
+
+\[
+1+i = \sqrt{2}\,(\cos\tfrac{\pi}{4} + i\sin\tfrac{\pi}{4}), \quad
+1-i = \sqrt{2}\,(\cos\tfrac{\pi}{4} - i\sin\tfrac{\pi}{4})
+\]
+
+\[
+z_1^n = (\sqrt{2})^n \left(\cos\tfrac{n\pi}{4} + i\sin\tfrac{n\pi}{4}\right)
+\]
+
+\[
+z_2^n = (\sqrt{2})^n \left(\cos\tfrac{n\pi}{4} - i\sin\tfrac{n\pi}{4}\right)
+\]
+
+\[
+z_1^n + z_2^n =
+(\sqrt{2})^n \Big[2\cos\tfrac{n\pi}{4}\Big]
+\]
+
+\[
+z_1^n + z_2^n = 2(\sqrt{2})^n \cos\left(\frac{n\pi}{4}\right)
+\]
+
+
+\end{document}
