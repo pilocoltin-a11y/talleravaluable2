@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[catalan]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\begin{document}
+\title{LABORATORI DE SOFTWARE I PROBLEMES \\ Taller Avaluable 2}
+\author{Caterina Serra i Víctor Girón}
+\date{23 de març de 2026}
+\maketitle
+\subtitle{Ineqacions}
+\begin{enumerate}
+\item Trobau el conjunts de punts que satisfà la següent inequació
+    \begin{equation}
+        |x - |x - 2|| < 3
+    \end{equation}
+
+    Solució: 
+    \[
+x + 3 > |x - 2| > x - 3
+\]
+
+\[
+\text{Cas 1: } x \ge 2
+\]
+\[
+x + 3 > x - 2 \quad \Rightarrow \quad 3 > -2 \quad (\text{Sempre cert})
+\]
+\[
+|x - 2| > x - 3 \quad \Rightarrow \quad x - 2 > x - 3 \quad \Rightarrow \quad -2 > -3 \quad (\text{Sempre cert})
+\]
+
+\[
+\text{Cas 2: } x < 2
+\]
+\[
+x + 3 > 2 - x \quad \Rightarrow \quad 2x > -1 \quad \Rightarrow \quad x > -\frac{1}{2}
+\]
+\[
+|x - 2| > x - 3 \quad \Rightarrow \quad 2 - x > x - 3 \quad \Rightarrow \quad 5 > 2x \quad \Rightarrow \quad x < \frac{5}{2}
+\]
+
+\[
+\text{Solució final: } -\frac{1}{2} < x < \frac{5}{2}
+\]
+\item Determinau el conjunt de punts que satisfà la següent inequació en funcio de a \in\mathbb{R}
+    
+    \begin{equation}
+        x^2 - ax \le 2
+    \end{equation}
+    Solució:
+    
+\[
+x^2 - ax \le 2
+\]
+
+La passem a forma estàndard:
+\[
+x^2 - ax - 2 \le 0
+\]
+
+Calculem el discriminant:
+\[
+\Delta = (-a)^2 - 4(1)(-2) = a^2 + 8
+\]
+
+Les arrels són:
+\[
+x = \frac{a \pm \sqrt{a^2 + 8}}{2}
+\]
+
+És a dir,
+\[
+x_1 = \frac{a - \sqrt{a^2 + 8}}{2}, \quad
+x_2 = \frac{a + \sqrt{a^2 + 8}}{2}
+\]
+
+Com que el coeficient principal és positiu, la solució de la inequació és:
+\[
+x \in \left[ \frac{a - \sqrt{a^2 + 8}}{2}, \; \frac{a + \sqrt{a^2 + 8}}{2} \right]
+\]
+        
+\end{enumerate}
+
+\end{document}
+
